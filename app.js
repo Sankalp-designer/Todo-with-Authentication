@@ -15,8 +15,8 @@ config({
 //Using Middleware
 app.use(express.json());
 app.use(cookieParser());
-app.use("/api/v1/users",userRouter);
-app.use("/api/v1/task",taskRouter);
+app.use(userRouter);
+app.use(taskRouter);
 app.use(cors({
     origin: true,
     methods: ["POST", "GET", "PUT", "DELETE"],

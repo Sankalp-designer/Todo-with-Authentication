@@ -4,9 +4,9 @@ import { deleteTask, getMyTask, newTask, updateTask } from "../controllers/task.
 
 const router = express.Router();
 
-router.post("/new", isAuthenticated, newTask);
+router.post("/task/new", isAuthenticated, newTask);
 
-router.get("/my", isAuthenticated, getMyTask);
+router.get("/task/my", isAuthenticated, getMyTask);
 
 router.route("/:id")
     .put(isAuthenticated,updateTask)
