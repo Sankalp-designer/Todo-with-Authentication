@@ -18,8 +18,7 @@ app.use(cookieParser());
 app.use(userRouter);
 app.use(taskRouter);
 app.use(function(req, res, next) {
-    // res.header("Access-Control-Allow-Origin", "*");
-    const allowedOrigins = ['http://localhost:4000', 'https://todo-with-authentication.onrender.com/'];
+    res.header("Access-Control-Allow-Origin", "*");
     const origin = req.headers.origin;
     if (allowedOrigins.includes(origin)) {
          res.setHeader('Access-Control-Allow-Origin', origin);
